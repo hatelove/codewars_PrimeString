@@ -16,7 +16,7 @@ namespace codewars_PrimeString
         public void s_is_ab_should_be_not_prime_string()
         {
             var s = "ab";
-            ShouldBeNotPrimeString(s);
+            ShoudBePrimeString(s);
         }
 
         private static void ShouldBeNotPrimeString(string s)
@@ -33,14 +33,14 @@ namespace codewars_PrimeString
         public void s_is_bb_should_be_prime_string()
         {
             var s = "bb";
-            ShoudBePrimeString(s);
+            ShouldBeNotPrimeString(s);
         }
 
         [TestMethod]
         public void s_is_baba_should_be_prime_string()
         {
             var s = "baba";
-            ShoudBePrimeString(s);
+            ShouldBeNotPrimeString(s);
         }
     }
 
@@ -54,11 +54,19 @@ namespace codewars_PrimeString
             }
             else
             {
-                var s0 = s[0];
-                var remainString = s.Substring(1, s.Length - 1);
-                var result = remainString.Replace(s[0].ToString(), "");
+                var partialString = "";
+                for (int i = 0; i < s.Length / 2; i++)
+                {
+                    partialString += s[i];
+                    var remainString = s.Substring(i + 1, s.Length - i - 1);
+                    var result = remainString.Replace(partialString, "");
+                    if (result.Length == 0)
+                    {
+                        return false;
+                    }
+                }
 
-                return result.Length == 0;
+                return true;
             }
         }
     }
