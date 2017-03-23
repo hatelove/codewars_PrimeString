@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 
 namespace codewars_PrimeString
 {
@@ -54,7 +53,11 @@ namespace codewars_PrimeString
                 }
                 else
                 {
-                    return true;
+                    var s0 = s[0];
+                    var remainString = s.Substring(1, s.Length - 1);
+                    var result = remainString.Replace(s[0].ToString(), "");
+
+                    return result.Length == 0;
                 }
             }
         }
