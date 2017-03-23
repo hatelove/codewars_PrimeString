@@ -17,6 +17,11 @@ namespace codewars_PrimeString
         public void s_is_ab_should_be_not_prime_string()
         {
             var s = "ab";
+            ShouldBeNotPrimeString(s);
+        }
+
+        private static void ShouldBeNotPrimeString(string s)
+        {
             Assert.IsFalse(new Kata().PrimeString(s));
         }
 
