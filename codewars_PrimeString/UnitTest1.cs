@@ -34,8 +34,17 @@ namespace codewars_PrimeString
             {
                 return true;
             }
-
-            throw new NotImplementedException();
+            else
+            {
+                if (s[0] != s[1])
+                {
+                    return false;
+                }
+                else
+                {
+                    throw new NotImplementedException();
+                }
+            }
         }
     }
 }
