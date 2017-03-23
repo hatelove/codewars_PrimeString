@@ -42,6 +42,13 @@ namespace codewars_PrimeString
             var s = "baba";
             ShouldBeNotPrimeString(s);
         }
+
+        [TestMethod]
+        public void s_is_fdsyffdsyffdsyffdsyffdsyf_should_be_not_prime_string()
+        {
+            var s = "fdsyffdsyffdsyffdsyffdsyf";
+            ShouldBeNotPrimeString(s);
+        }
     }
 
     public class Kata
