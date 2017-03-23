@@ -29,6 +29,13 @@ namespace codewars_PrimeString
         {
             Assert.IsTrue(new Kata().PrimeString(s));
         }
+
+        [TestMethod]
+        public void s_is_bb_should_be_prime_string()
+        {
+            var s = "bb";
+            ShoudBePrimeString(s);
+        }
     }
 
     public class Kata
