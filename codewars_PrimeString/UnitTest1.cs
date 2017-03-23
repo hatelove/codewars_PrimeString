@@ -35,6 +35,13 @@ namespace codewars_PrimeString
             var s = "bb";
             ShoudBePrimeString(s);
         }
+
+        [TestMethod]
+        public void s_is_baba_should_be_prime_string()
+        {
+            var s = "baba";
+            ShoudBePrimeString(s);
+        }
     }
 
     public class Kata
