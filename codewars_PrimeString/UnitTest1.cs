@@ -13,6 +13,13 @@ namespace codewars_PrimeString
             ShoudBePrimeString(s);
         }
 
+        [TestMethod]
+        public void s_is_ab_should_be_not_prime_string()
+        {
+            var s = "ab";
+            Assert.IsFalse(new Kata().PrimeString(s));
+        }
+
         private static void ShoudBePrimeString(string s)
         {
             Assert.IsTrue(new Kata().PrimeString(s));
