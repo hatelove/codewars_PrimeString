@@ -10,6 +10,11 @@ namespace codewars_PrimeString
         public void s_is_b_should_be_prime_string()
         {
             var s = "b";
+            ShoudBePrimeString(s);
+        }
+
+        private static void ShoudBePrimeString(string s)
+        {
             Assert.IsTrue(new Kata().PrimeString(s));
         }
     }
