@@ -58,9 +58,10 @@ namespace codewars_PrimeString
                 for (int i = 0; i < s.Length / 2; i++)
                 {
                     partialString += s[i];
-                    var remainString = s.Substring(i + 1, s.Length - i - 1);
+                    var startIndex = i + 1;
+                    var remainString = GetRemainString(s, startIndex);
                     var result = remainString.Replace(partialString, "");
-                    if (result.Length == 0)
+                    if (string.IsNullOrWhiteSpace(result))
                     {
                         return false;
                     }
@@ -68,6 +69,11 @@ namespace codewars_PrimeString
 
                 return true;
             }
+        }
+
+        private static string GetRemainString(string s, int startIndex)
+        {
+            return s.Substring(startIndex, s.Length - startIndex);
         }
     }
 }
