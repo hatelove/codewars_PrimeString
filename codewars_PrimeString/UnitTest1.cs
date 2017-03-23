@@ -54,7 +54,7 @@ namespace codewars_PrimeString
                 }
                 else
                 {
-                    throw new NotImplementedException();
+                    return true;
                 }
             }
         }
