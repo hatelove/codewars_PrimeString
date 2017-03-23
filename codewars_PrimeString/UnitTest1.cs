@@ -23,6 +23,11 @@ namespace codewars_PrimeString
     {
         public bool PrimeString(string s)
         {
+            if (s.Length == 1)
+            {
+                return true;
+            }
+
             throw new NotImplementedException();
         }
     }
