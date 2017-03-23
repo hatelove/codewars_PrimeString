@@ -55,27 +55,20 @@ namespace codewars_PrimeString
     {
         public bool PrimeString(string s)
         {
-            if (s.Length == 1)
+            var partialString = "";
+            for (int i = 0; i < s.Length / 2; i++)
             {
-                return true;
-            }
-            else
-            {
-                var partialString = "";
-                for (int i = 0; i < s.Length / 2; i++)
+                partialString += s[i];
+                var startIndex = i + 1;
+                var remainString = GetRemainString(s, startIndex);
+                var result = remainString.Replace(partialString, "");
+                if (string.IsNullOrWhiteSpace(result))
                 {
-                    partialString += s[i];
-                    var startIndex = i + 1;
-                    var remainString = GetRemainString(s, startIndex);
-                    var result = remainString.Replace(partialString, "");
-                    if (string.IsNullOrWhiteSpace(result))
-                    {
-                        return false;
-                    }
+                    return false;
                 }
-
-                return true;
             }
+
+            return true;
         }
 
         private static string GetRemainString(string s, int startIndex)
