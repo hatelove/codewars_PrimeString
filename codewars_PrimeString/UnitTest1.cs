@@ -47,18 +47,11 @@ namespace codewars_PrimeString
             }
             else
             {
-                if (s[0] != s[1])
-                {
-                    return false;
-                }
-                else
-                {
-                    var s0 = s[0];
-                    var remainString = s.Substring(1, s.Length - 1);
-                    var result = remainString.Replace(s[0].ToString(), "");
+                var s0 = s[0];
+                var remainString = s.Substring(1, s.Length - 1);
+                var result = remainString.Replace(s[0].ToString(), "");
 
-                    return result.Length == 0;
-                }
+                return result.Length == 0;
             }
         }
     }
